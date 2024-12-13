@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamheom</title>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bluGld.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='tamheom-removebg-preview.png')}}">
+</head>
+<body>
+    <header>
+        <div class="heading"><span><a href="/"><img src="{{url_for('static', filename='tamheom-removebg-preview.png')}}" alt="" draggable="false"></a></span><H1>Tamheom</H1></div>
+        <nav>
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="/about"><li>About</li></a>
+                <a href="/contact"><li>Feedback</li></a>
+            </ul>
+        </nav>
+    </header>
+    
+    {% block content %}{% endblock %}
+    
+    <script src="{{ url_for('static', filename='js/umain.js') }}"></script>
+    <footer>
+        <p>&copy; 2024 Tamheom. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

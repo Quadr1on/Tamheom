@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-6xl space-y-8">
+    <!-- Hero Section -->
+    <header class="header">
+        <h1>Discover Your City's Hidden Gems</h1>
+        <div class="search-container">
+            <i data-lucide="search" class="text-gray-500"></i>
+            <input type="text" id="searchInput" placeholder="Search experiences...">
+            <i data-lucide="map-pin" class="text-gray-500"></i>
+            <select id="locationSelect">
+                {% for city in cities %}
+                <option value="{{ city.id }}">{{ city.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </header>
+
+    <!-- Feature Grid -->
+    <div class="grid">
+        <!-- Events Calendar -->
+        <div class="card">
+            <div class="card-header">
+                <i data-lucide="calendar" class="icon icon-blue"></i>
+                <h2>Local Events</h2>
+            </div>
+            <ul class="card-list" id="eventsList"></ul>
+        </div>
+
+        <!-- Hidden Gems -->
+        <div class="card">
+            <div class="card-header">
+                <i data-lucide="star" class="icon icon-yellow"></i>
+                <h2>Hidden Gems</h2>
+            </div>
+            <ul class="card-list" id="gemsList"></ul>
+        </div>
+
+        <!-- Walking Tours -->
+        <div class="card">
+            <div class="card-header">
+                <i data-lucide="navigation-2" class="icon icon-green"></i>
+                <h2>Walking Tours</h2>
+            </div>
+            <ul class="card-list" id="toursList"></ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

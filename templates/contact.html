@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamheom</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/contact.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <form>
+        <header>
+            <div class="heading"><span><a href="/"><img src="{{url_for('static', filename='tamheom-removebg-preview.png')}}" alt="" draggable="false"></a></span><H1>Tamheom</H1></div>
+            <nav>
+                <ul>
+                    <a href="/"><li>Home</li></a>
+                    <a href="/about"><li>About</li></a>
+                    <a href="/contact"><li>Feedback</li></a>
+                </ul>
+            </nav>
+        </header>
+        <div class="title">
+            <H1>Feedback Form</H1>
+        </div>
+        
+        <!-- <hr> -->
+        <main>
+            <div class="form">
+                <h2>Personal Details</h2>
+                <div class="hr"></div>
+                <div class="details">
+                    <div class="name">
+                        <label for="fName">First Name</label>
+                        <input class="fname" type="text" name="fName" placeholder="First Name">
+                        <label for="fName">Last Name</label>
+                        <input class="fname" type="text" name="fName" placeholder="Last Name">
+                    </div>
+                    <div class="genDob">
+                        <div class="gender">
+                            <div>
+                                <input type="radio" name="male" id="gender">
+                                <label for="gender">Male</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="male" id="gender2">
+                                <label for="gender2">Female</label>
+                            </div>
+                        </div>
+                        <div class="dob">
+                            <label for="DOB">Date of Birth</label>
+                            <input type="date">
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="email">
+                            <label for="email">Email </label>
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="num">
+                            <label for="Phone" >Phone </label>
+                            <input type="tel" name="Phone" id="Phone" placeholder="Phone Number">
+                        </div>
+                    </div>
+
+                    <div class="SubYear">
+                        <div class="subject">
+                            <label for="Subject">Sunject </label>
+                            <select name="Subject" id="Subject">
+                                <option>None</option>
+                                <option>CSE CORE</option>
+                                <option>CSE AIML</option>
+                                <option>CSE BDA</option>
+                                <option>CSE CyberSecurity</option>
+                                <option>Mechanical Engineering</option>
+                                <option>Electrical Engineering</option>
+                            </select>
+                        </div>
+                        <div class="section">
+                            <label for="Section">Section </label>
+                            <select name="Section" id="Section">
+                                <option>None</option>
+                                <option>A</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>D</option>
+                                <option>E</option>
+                            </select>
+                        </div>
+                        <div class="year">
+                            <label for="Year">Year </label>
+                            <select name="Year" id="Year">
+                                <option>None</option>
+                                <option>1<sup>st</sup> Year</option>
+                                <option>2<sup>st</sup> Year</option>
+                                <option>3<sup>st</sup> Year</option>
+                                <option>4<sup>st</sup> Year</option>
+                            </select>
+                        </div> 
+                    </div>
+                </div>
+                <div class="feedback">
+                    <h2>Feedback</h2>
+                    <div class="hr"></div>
+                    <div class="feedback-form">
+                        
+                        <div class="rating">
+                            <div class="rating-label">Overall Rating</div>
+                            <div class="rating-icons">
+                                <input type="radio" name="rating1" id="rating1">
+                                <label for="rating1" class="fa fa-star"></label>
+    
+                                <input type="radio" name="rating1" id="rating2">
+                                <label for="rating2" class="fa fa-star"></label>
+    
+                                <input type="radio" name="rating1" id="rating3">
+                                <label for="rating3" class="fa fa-star"></label>
+    
+                                <input type="radio" name="rating1" id="rating4">
+                                <label for="rating4" class="fa fa-star"></label>
+    
+                                <input type="radio" name="rating1" id="rating5">
+                                <label for="rating5" class="fa fa-star"></label>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <div class="rating-label">How likely will you recommend us to others</div>
+                            <div class="rating-icons">
+                                <input type="radio" name="reting1" id="reting1">
+                                <label for="reting1" class="fa fa-star"></label>
+    
+                                <input type="radio" name="reting1" id="reting2">
+                                <label for="reting2" class="fa fa-star"></label>
+    
+                                <input type="radio" name="reting1" id="reting3">
+                                <label for="reting3" class="fa fa-star"></label>
+    
+                                <input type="radio" name="reting1" id="reting4">
+                                <label for="reting4" class="fa fa-star"></label>
+    
+                                <input type="radio" name="reting1" id="reting5">
+                                <label for="reting5" class="fa fa-star"></label>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="comment-text">How can we improve our services?</div>
+                            <textarea name="comment" id="comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="btn-cont">
+                        <button class="btn">SUBMIT</button>
+                    </div>
+                </div>
+            </main>
+    </form>
+</body>
+</html>
